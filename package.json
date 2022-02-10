@@ -1,0 +1,24 @@
+{
+  "name": "my-basement",
+  "version": "1.0.0",
+  "description": "where I save my images and stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LibanAlasow/my-basement.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LibanAlasow/my-basement/issues"
+  },
+  "homepage": "https://github.com/LibanAlasow/my-basement#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
