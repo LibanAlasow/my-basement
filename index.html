@@ -1,1 +1,43 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Liban</title>
+  </head>
+  <body>
+    <img
+      src="https://github.com/LibanAlasow/my-basement/blob/main/planet-tr.png?raw=true"
+      class="thumbnail"
+    />
+    <p>Redirecting.</p>
+  </body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Poppins", monospace;
+  }
+
+  .thumbnail {
+    max-height: 200px;
+  }
+</style>
+
+<script>
+  setTimeout(() => {
+    document.querySelector("p").innerHTML = "redirection..";
+  }, 500);
+  setTimeout(() => {
+    document.querySelector("p").innerHTML = "redirection...";
+  }, 1000);
+  setTimeout(() => {
+    window.location.href = "https://libanalasow.github.io/";
+  }, 1500);
+</script>
