@@ -28,7 +28,7 @@
           <div class="text">
             <p class="username">Liban Alasow</p>
             <p class="caption">
-              <ion-icon name="leaf-outline"></ion-icon> Thanks for visiting
+              <ion-icon name="leaf-outline"></ion-icon> Thank's for visiting
             </p>
           </div>
         </div>
@@ -43,6 +43,7 @@
             cursor: pointer;
             box-shadow: lightgray 0 10px 25px 0px;
           "
+          class="planet"
           onclick="window.open('https://libanalasow.github.io/')"
         >
           <ion-icon name="planet-outline"></ion-icon>
@@ -64,24 +65,30 @@
         </div>
         <p class="medium-title">What do I do?</p>
         <div class="hub">
-          <div class="icon"><ion-icon name="logo-html5"></ion-icon></div>
-          <p style="margin: 0;">HTML</p>
+          <div style="display: flex;">
+            <div class="icon"><ion-icon name="logo-html5"></ion-icon></div>
+            <p style="margin: 0;">HTML</p>
+          </div>
           <div class="bar">
-            <div class="bar-inner"></div>
+            <div class="bar-inner" style="animation: anim1;"></div>
           </div>
         </div>
         <div class="hub">
-          <div class="icon"><ion-icon name="logo-css3"></ion-icon></div>
-          <p style="margin: 0;">CSS</p>
+          <div style="display: flex;">
+            <div class="icon"><ion-icon name="logo-css3"></ion-icon></div>
+            <p style="margin: 0;">CSS</p>
+          </div>
           <div class="bar">
-            <div class="bar-inner" style="width: 95%;"></div>
+            <div class="bar-inner" style="width: 95%; animation: anim2;"></div>
           </div>
         </div>
         <div class="hub">
-          <div class="icon"><ion-icon name="logo-javascript"></ion-icon></div>
-          <p style="margin: 0;">Javascript</p>
+          <div style="display: flex;">
+            <div class="icon"><ion-icon name="logo-javascript"></ion-icon></div>
+            <p style="margin: 0;">Javascript</p>
+          </div>
           <div class="bar">
-            <div class="bar-inner" style="width: 60%;"></div>
+            <div class="bar-inner" style="width: 60%; animation: anim3;"></div>
           </div>
         </div>
       </div>
@@ -96,6 +103,33 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+  }
+
+  @keyframes anim1 {
+    from {
+      width: 1%;
+    }
+    to {
+      width: 82%;
+    }
+  }
+
+  @keyframes anim2 {
+    from {
+      width: 1%;
+    }
+    to {
+      width: 95%;
+    }
+  }
+
+  @keyframes anim3 {
+    from {
+      width: 1%;
+    }
+    to {
+      width: 60%;
+    }
   }
 
   * {
@@ -142,6 +176,11 @@
     color: gray;
   }
 
+  .planet:hover {
+    box-shadow: none;
+    transition: 0.5s;
+  }
+
   .section2 {
     height: 100px;
     margin-top: 20px;
@@ -169,8 +208,13 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-shadow: rgba(10, 7, 27, 0.15) 0px 48px 100px 0px;
     background: white;
+    transition: 0.5s;
+  }
+  .hub:hover {
+    box-shadow: none;
   }
 
   .icon {
@@ -179,7 +223,7 @@
 
   .bar {
     height: 15px;
-    width: 100%;
+    width: 350px;
     margin: 10px;
     background: rgb(210, 210, 210);
     border-radius: 7px;
