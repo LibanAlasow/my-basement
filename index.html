@@ -1,224 +1,244 @@
 <style>
-body {
-    margin: 0;
-    min-height: 100vh;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+    body {
+        margin: 0;
+        min-height: 100vh;
+    }
     
-.status {
-    padding: 10px;
-    border: rgb(52, 145, 55) solid 1px;
-    border-radius: 4px;
-    color: rgb(52, 145, 55)
-}
+    * {
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+        
+    .status {
+        padding: 10px;
+        border: rgb(52, 145, 55) solid 1px;
+        border-radius: 4px;
+        color: rgb(52, 145, 55)
+    }
+    
+    .card {
+        width: 750px;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+        background: white;
+        box-shadow: rgba(211, 211, 211, 0.603) 0 48px 48px 48px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: flex;
+        padding: 10px;
+        padding-bottom: 20px
+    }
+    
+    .card .left {
+        width: 30%;
+        height: 100%;
+        padding: 20px;
+    }
+    
+    .card .right {
+        width: 70%;
+        height: 100%;
+    }
+    
+    
+    .banner {
+      width: 750px;
+      height: 100px;
+      background: red;
+      margin: 50px auto;
+      margin-bottom: 0;
+      border-radius: 10px 10px 0 0;
+      background-position: center;
+      background-size: cover;
+      background-image: url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif);
+    }
+    
+    .pfp {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, rgb(0, 115, 255), rgb(119, 0, 255));
+        background-position: center;
+        background-size: cover;
+        background-image: url(https://cdn.discordapp.com/attachments/962793531368435734/1026932556895092837/unknown.png);
+    }
+    
+    .username {
+        margin: 5px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    
+    .full-username {
+        margin: 5px;
+        font-size: 15px;
+        color: rgb(62, 62, 62)
+    }
+    
+    .card .top {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .primary {
+        height: 35px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(49, 49, 49);
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .secondary {
+        height: 35px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(49, 49, 49);
+        display: flex;
+        align-items: center;
+    }
+    
+    .text {
+        padding: 20px;
+        padding-top: 0;
+    }
+    
+    .small {
+        color: rgb(84, 84, 84);
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .bars {
+        padding-left: 0;
+    }
+    
+    .bar {
+        border-radius: 10px;
+        height: 75px;
+        width: 100%;
+        background-color: white;
+        box-shadow: rgba(211, 211, 211, 0.463) 0 20px 38px 8px;
+        display: flex;
+        align-items: center;
+        display: flex;
+        padding: 15px;
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+    
+    .bar p {
+        display: flex;
+        align-items: center;
+    }
+    
+    .bar-inner {
+        border-radius: 10px;
+        height: 20px;
+        width: 300px;
+        margin: 10px;
+        background: rgb(220, 220, 220);
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        background: rgb(85, 85, 255);
+        height: 100%;
+        width: 65%;
+        border-radius: 10px;
+    }
+    
+    .hire {
+        padding: 5px 35px;
+        font-size: 19px;
+        margin-top: 15px;
+        border: none;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: rgba(190, 190, 190, 0.463) 0 5px 10px 5px;
+        background-color: rgb(133, 214, 133);
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+    }
 
-.card {
-    width: 750px;
-    height: 550px;
-    border-radius: 0 0 10px 10px;
-    background: white;
-    box-shadow: rgba(211, 211, 211, 0.603) 0 48px 48px 48px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    display: flex;
-    padding: 10px;
-}
-
-.card .left {
-    width: 30%;
-    height: 100%;
-    padding: 20px;
-}
-
-.card .right {
-    width: 70%;
-    height: 100%;
-}
-
-
-.banner {
-  width: 750px;
-  height: 100px;
-  background: red;
-  margin: 50px auto;
-  margin-bottom: 0;
-  border-radius: 10px 10px 0 0;
-  background-position: center;
-  background-size: cover;
-  background-image: url(https://media.discordapp.net/attachments/936322959163940945/958049931287998504/reve.gif?width=454&height=194);
-}
-
-.pfp {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: linear-gradient(to right, rgb(0, 115, 255), rgb(119, 0, 255));
-    background-position: center;
-    background-size: cover;
-    background-image: url(https://cdn.discordapp.com/avatars/581172306928467970/84016e8d688c5cc25187a264d7e6a7d5.webp?size=80);
-}
-
-.username {
-    margin: 5px;
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.full-username {
-    margin: 5px;
-    font-size: 15px;
-    color: rgb(62, 62, 62)
-}
-
-.card .top {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.primary {
-    height: 35px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background: rgb(49, 49, 49);
-    display: flex;
-    align-items: center;
-}
-
-
-.secondary {
-    height: 35px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background: rgb(49, 49, 49);
-    display: flex;
-    align-items: center;
-}
-
-.text {
-    padding: 20px;
-    padding-top: 0;
-}
-
-.small {
-    color: rgb(84, 84, 84);
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.bars {
-    padding-left: 0;
-}
-
-.bar {
-    border-radius: 10px;
-    height: 75px;
-    width: 100%;
-    background-color: white;
-    box-shadow: rgba(211, 211, 211, 0.463) 0 20px 38px 8px;
-    display: flex;
-    align-items: center;
-    display: flex;
-    padding: 15px;
-    margin-top: 15px;
-    justify-content: space-between;
-}
-
-.bar p {
-    display: flex;
-    align-items: center;
-}
-
-.bar-inner {
-    border-radius: 10px;
-    height: 20px;
-    width: 300px;
-    margin: 10px;
-    background: rgb(220, 220, 220);
-    overflow: hidden;
-}
-
-.progress-bar {
-    background: rgb(85, 85, 255);
-    height: 100%;
-    width: 65%;
-    border-radius: 10px;
-}
-
-
-</style>
-
-
-
-
-
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Liban</title>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
-</head>
-<body>
-    <div class="banner"></div>
-    <div class="card">
-        <div class="left">
-            <div class="pfp"></div>
-            <p class="username">Liban Alasow</p>
-            <link rel="shortcut icon" href="https://media.discordapp.net/attachments/923165246133252127/959485837094060063/user.png?width=104&height=104" type="image/x-icon">
-            <p class="full-username" style="display: flex; align-items: center;"><ion-icon name="logo-discord" style="margin-right: 5px;"></ion-icon> Liban#9810</p>
-        </div>
-        <div class="right">
-            <div class="top">
-                <p style="color: gray"><ion-icon name="clipboard-outline"></ion-icon> Wildlife productions</p>
-                <button class="secondary"><ion-icon name="logo-github" style="margin-right: 5px;"></ion-icon>  /LibanAlasow</button>
+    .hire:hover {
+        box-shadow: none;
+    }
+    
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Liban</title>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    </head>
+    <body>
+        <div class="banner"></div>
+        <div class="card">
+            <div class="left">
+                <div class="pfp"></div>
+                <p class="username">Liban Alasow</p>
+                <link rel="shortcut icon" href="https://media.discordapp.net/attachments/923165246133252127/959485837094060063/user.png?width=104&height=104" type="image/x-icon">
+                <p class="full-username" style="display: flex; align-items: center;"><ion-icon name="logo-discord" style="margin-right: 5px;"></ion-icon> Liban#9810</p>
+                <a class="hire" href="mailto:said.liban.alasow@gmail.com?subject=Hire request&body=Please list at least 5 models you need and don't forget to leave your email/discord:">Hire</a>
             </div>
-            <div class="text">
-                <div class="status"><ion-icon name="moon-outline"></ion-icon> Working on a discord bot</div>
-                <p class="small">ABOUT ME</p>
-                <p style="width: 80%">Hi, my name is liban. I am a bot developer and a web designer</p>
-                <p class="small">SKILLS</p>
-                <div class="bars">
-                    <div class="bar">
-                        <p><ion-icon name="logo-nodejs" style="margin: 2.5px;"></ion-icon> Javascript</p>
-                        <div class="bar-inner">
-                            <div class="progress-bar" style="width: 81%"></div>
+            <div class="right">
+                <div class="top">
+                    <p style="color: gray"><ion-icon name="clipboard-outline"></ion-icon> 3D Modeler</p>
+                    <button class="secondary"><ion-icon name="logo-github" style="margin-right: 5px;"></ion-icon>  /LibanAlasow</button>
+                </div>
+                <div class="text">
+                    <div class="status"><ion-icon name="moon-outline"></ion-icon> Commissions open</div>
+                    <p class="small">ABOUT ME</p>
+                    <p style="width: 80%">Advanced 3D modeler, please keep in mind that rushing me only makes things worse. I'm active in discord and you're welcome to contact me in DMs but I prefer mailing if you'd like to hire.</p>
+                    <p class="small">SKILLS</p>
+                    <div class="bars">
+                        <div class="bar">
+                            <p><ion-icon name="logo-nodejs" style="margin: 2.5px;"></ion-icon> Javascript</p>
+                            <div class="bar-inner">
+                                <div class="progress-bar" style="width: 81%"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bar">
-                        <p><ion-icon name="planet-outline" style="margin: 2.5px;"></ion-icon> HTML/CSS</p>
-                        <div class="bar-inner">
-                            <div class="progress-bar" style="width: 65%"></div>
+                        <div class="bar">
+                            <p><ion-icon name="planet-outline" style="margin: 2.5px;"></ion-icon> HTML/CSS</p>
+                            <div class="bar-inner">
+                                <div class="progress-bar" style="width: 65%"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bar">
-                        <p><ion-icon name="logo-python" style="margin: 2.5px;"></ion-icon> Python</p>
-                        <div class="bar-inner">
-                            <div class="progress-bar" style="width: 65%"></div>
+                        <div class="bar">
+                            <p><ion-icon name="logo-python" style="margin: 2.5px;"></ion-icon> Python</p>
+                            <div class="bar-inner">
+                                <div class="progress-bar" style="width: 65%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
+    
